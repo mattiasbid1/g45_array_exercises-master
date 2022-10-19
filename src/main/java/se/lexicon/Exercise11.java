@@ -33,13 +33,13 @@ public class Exercise11 {
                 startArray[0] = scan.nextInt();
                 theArray = startArray.clone();
                 tempArray = theArray.clone();
-                magic = MagicCheck(startArray[0]);
+                magic = magicCheck(startArray[0]);
                 counter++;
             } else { ////////////// runs after the first
 
-                theArray = Expander(tempArray, 1, scan.nextInt());
+                theArray = expander(tempArray, 1, scan.nextInt());
                 tempArray = theArray.clone();
-                magic = MagicCheck(theArray[counter - 1]);
+                magic = magicCheck(theArray[counter - 1]);
                 counter++;
 
             }
@@ -47,16 +47,16 @@ public class Exercise11 {
 
         } // while
         System.out.print("The array before magic use: ");
-        PrintArray(theArray, false);
+        printArray(theArray, false);
         System.out.print("\nThe array after magic use: ");
-        tempArray = Reverser(theArray);
-        PrintArray(tempArray, false);
+        tempArray = reverser(theArray);
+        printArray(tempArray, false);
 
 
         System.out.println();
     } // ex11
 
-    public static int[] Expander(int[] array, int sizeIncrement, int newValue) { ////// expands array, x times, with new value
+    public static int[] expander(int[] array, int sizeIncrement, int newValue) { ////// expands array, x times, with new value
 
         int[] expandedArray = new int[array.length + sizeIncrement];
         for (int i = 0; i < expandedArray.length; i++) {
@@ -68,18 +68,18 @@ public class Exercise11 {
 
         }
         return expandedArray;
-    } // Expand
+    } // expander
 
-    public static int[] Reverser(int[] arr) { /////// returns a revered array
+    public static int[] reverser(int[] arr) { /////// returns a revered array
 
         int revArr[] = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             revArr[arr.length - 1 - i] = arr[i];
         }
         return revArr;
-    } // Reverser
+    } // reverser
 
-    public static void PrintArray(int[] ar, boolean newLine) { //////// Prints the array w/ or w/o new lines
+    public static void printArray(int[] ar, boolean newLine) { //////// Prints the array w/ or w/o new lines
         for (int i = 0; i < ar.length; i++) {
             if (newLine) {
                 System.out.println(ar[i]);
@@ -88,15 +88,15 @@ public class Exercise11 {
             }
         }
 
-    } // PrintArray
+    } // printArray
 
-    public static boolean MagicCheck(int checkValue) { //////// checks for magic number
+    public static boolean magicCheck(int checkValue) { //////// checks for magic number
         boolean magic = false;
         if (checkValue == 222) {
             magic = true;
         }
         return magic;
-    } // MagicCount
+    } // magicCheck
 
 
-}
+} // Exercise11
