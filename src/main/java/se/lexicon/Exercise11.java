@@ -56,7 +56,8 @@ public class Exercise11 {
         System.out.println();
     } // ex11
 
-    public static int[] expander(int[] array, int sizeIncrement, int newValue) { ////// expands array, x times, with new value
+    /** Expands the array by sizeIncrement and adds newValue as the new indexed value */
+    public static int[] expander(int[] array, int sizeIncrement, int newValue) {
 
         int[] expandedArray = new int[array.length + sizeIncrement];
         for (int i = 0; i < expandedArray.length; i++) {
@@ -70,7 +71,8 @@ public class Exercise11 {
         return expandedArray;
     } // expander
 
-    public static int[] reverser(int[] arr) { /////// returns a revered array
+    /** Returns a reversed array where the first and last value change places, the second and second last value change places... etc */
+    public static int[] reverser(int[] arr) {
 
         int revArr[] = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
@@ -79,7 +81,8 @@ public class Exercise11 {
         return revArr;
     } // reverser
 
-    public static void printArray(int[] ar, boolean newLine) { //////// Prints the array w/ or w/o new lines
+    /** Prints an array vertically if true and horizontally if false */
+    public static void printArray(int[] ar, boolean newLine) {
         for (int i = 0; i < ar.length; i++) {
             if (newLine) {
                 System.out.println(ar[i]);
@@ -90,7 +93,8 @@ public class Exercise11 {
 
     } // printArray
 
-    public static boolean magicCheck(int checkValue) { //////// checks for magic number
+    /** Checks if checkvalue is the magic number and returns true if it is and false if it's not */
+    public static boolean magicCheck(int checkValue) {
         boolean magic = false;
         if (checkValue == 222) {
             magic = true;

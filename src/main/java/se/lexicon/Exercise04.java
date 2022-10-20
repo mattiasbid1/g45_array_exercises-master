@@ -13,12 +13,26 @@ public class Exercise04 {
     int numbers[] = {1, 15, 20};
     int copyNumbers[] = numbers.clone();
 
-    for (int i = 0; i < copyNumbers.length; i++) {
-      System.out.print(copyNumbers[i] + " ");
+    System.out.print("Elements from first array: ");
+    printArray(numbers, false);
 
+    System.out.print("\nElements from second array: ");
+    printArray(copyNumbers, false);
+
+
+    System.out.println();
+
+  } // ex4
+
+  /** Prints an array vertically if true and horizontally if false */
+  public static void printArray(int[] ar, boolean newLine) {
+    for (int i = 0; i < ar.length; i++) {
+      if (newLine) {
+        System.out.println(ar[i]);
+      } else {
+        System.out.print(ar[i] + " ");
+      }
     }
-    System.out.println("");
+  } // printarray
 
-  }
-
-}
+} // Exercise04

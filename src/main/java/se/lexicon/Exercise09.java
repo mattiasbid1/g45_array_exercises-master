@@ -34,9 +34,8 @@ public class Exercise09 {
 
     } // ex9
 
+  /** Expands the array by adding sizeIncrement new values and every new value is twice as large as the previous one */
   public static int[] Expand(int[] array, int sizeIncrement) {
-    // takes an array and expands it by a given size increment
-    // and also fills the new slots with *2 value of previous value
     int[] expandedArray = new int[array.length + sizeIncrement];
     for (int i = 0; i < expandedArray.length; i++) {
       if (array.length -1 >= i) {

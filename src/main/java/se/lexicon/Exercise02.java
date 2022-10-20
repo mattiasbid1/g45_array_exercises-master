@@ -11,15 +11,18 @@ public class Exercise02 {
      */
     public static void ex2() {
 
-        int[] theArray = {2, 8, 5, 5, 14, 17, 20};
+        int[] theArray = {2, 8, 5, 1, 14, 17, 20};
 
-        System.out.print("Find index of number: ");
+        System.out.print("The array: ");
+        printArray(theArray, false);
+
+        System.out.print("\nFind index of number: ");
         Scanner scan = new Scanner(System.in);
         int findNumber = scan.nextInt();
         indexOf(theArray, findNumber);
 
-    }
-
+    } // ex2
+/** Scans the array and prints the index of the target or -1 if target is not within the array */
     public static void indexOf(int[] arr, int target) {
         int targetSpot = -1;
         for (int i = 0; i < arr.length; i++) {
@@ -29,7 +32,17 @@ public class Exercise02 {
 
         }
         System.out.println("The number " + target + " has the index " + targetSpot);
-    }
+    } // indexOf
 
+    /** Prints an array vertically if true and horizontally if false */
+    public static void printArray(int[] ar, boolean newLine) {
+        for (int i = 0; i < ar.length; i++) {
+            if (newLine) {
+                System.out.println(ar[i]);
+            } else {
+                System.out.print(ar[i] + " ");
+            }
+        }
+    } // printarray
 
-}
+} // exercise 2

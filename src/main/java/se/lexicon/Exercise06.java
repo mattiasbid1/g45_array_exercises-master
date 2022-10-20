@@ -21,6 +21,6 @@ public class Exercise06 {
     result = sum / numebers.length;
     System.out.println("Average is: " + df.format(result));
 
-  }
+  } // ex6
 
 }
